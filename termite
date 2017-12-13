@@ -47,6 +47,7 @@ background = rgba(0, 0, 0, 0.85)
 highlight = #2f2f2f
 
 # colors from color0 to color254 can be set
+# Sierra colocrscheme
 color0 = #303030
 color1 = #af5f5f
 color2 = #d75f5f

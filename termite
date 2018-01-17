@@ -1,69 +1,98 @@
-# ~/.config/termite/config
-
 [options]
-scroll_on_output = false
-scroll_on_keystroke = true
-audible_bell = false
-mouse_autohide = true 
-allow_bold = true
-dynamic_title = true
-urgent_on_bell = true
-clickable_url = true
-font = inconsolata 14
-scrollback_lines = 10000
-search_wrap = true
-#icon_name = terminal
+#allow_bold = true
+#audible_bell = false
+#clickable_url = true
+#dynamic_title = true
+font = Envy Code R 14 
+#fullscreen = true
 #geometry = 640x480
-
-# "system", "on" or "off"
-cursor_blink = system
-
-# "block", "underline" or "ibeam"
-cursor_shape = block
+#icon_name = terminal
+#mouse_autohide = false
+#scroll_on_output = false
+#scroll_on_keystroke = true
+# Length of the scrollback buffer, 0 disabled the scrollback buffer
+# and setting it to a negative value means "infinite scrollback"
+scrollback_lines = 10000
+#search_wrap = true
+#urgent_on_bell = true
+#hyperlinks = false
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
 #browser = xdg-open
 
+# "system", "on" or "off"
+#cursor_blink = system
+
+# "block", "underline" or "ibeam"
+#cursor_shape = block
+
+# Hide links that are no longer valid in url select overlay mode
+#filter_unmatched_urls = true
+
+# Emit escape sequences for extra modified keys
+#modify_other_keys = false
+
 # set size hints for the window
 #size_hints = false
 
-# Hide links that are no longer valid in url select overlay mode
-filter_unmatched_urls = true
-
-# emit escape sequences for extra modified keys
-#modify_other_keys = false
+# "off", "left" or "right"
+#scrollbar = off
 
 [colors]
+# If both of these are unset, cursor falls back to the foreground color,
+# and cursor_foreground falls back to the background color.
 #cursor = #dcdccc
 #cursor_foreground = #dcdccc
-foreground = #dcdccc
-foreground_bold = #ffffff
-background = #3f3f3f
+
+#foreground = #dcdccc
+#foreground_bold = #ffffff
+#background = #3f3f3f
 
 # 20% background transparency (requires a compositor)
-background = rgba(0, 0, 0, 0.85)
+#background = rgba(0, 0, 0, 0.8)
 
-# if unset, will reverse foreground and background
+# If unset, will reverse foreground and background
 highlight = #2f2f2f
 
-# colors from color0 to color254 can be set
-# Sierra colocrscheme
-color0 = #303030
-color1 = #af5f5f
-color2 = #d75f5f
-color3 = #afd7d7
-color4 = #af8787
-color5 = #dfaf87
-color6 = #ffafaf
-color7 = #dfdfaf
-color8 = #6c6c6c
-color9 = #af5f5f
-color10 = #d75f5f
-color11 = #afd7d7
-color12 = #af8787
-color13 = #dfaf87
-color14 = #ffafaf
-color15 = #dfdfaf
+
+# special
+foreground      = #b9dae4
+foreground_bold = #b9dae4
+cursor          = #b9dae4
+background      = #060a0b
+
+# black
+color0  = #0c1213
+color8  = #f1bea8
+
+# red
+color1  = #141c1e
+color9  = #de9873
+
+# green
+color2  = #232e31
+color10 = #eeaed1
+
+# yellow
+color3  = #37474b
+color11 = #51bcd2
+
+# blue
+color4  = #51666c
+color12 = #65c3d8
+
+# magenta
+color5  = #708c94
+color13 = #ee9e6f
+
+# cyan
+color6  = #94b8c2
+color14 = #f3a3d0
+
+# white
+color7  = #d1e6ed
+color15 = #6bcbe2
+
 
 [hints]
 #font = Monospace 12

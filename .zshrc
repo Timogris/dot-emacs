@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 #
 PATH="${PATH}:${HOME}/.local/bin/"
 
-~/.scripts/./wal.sh
+#~/.scripts/./wal.sh
 
 #USER ALIASES
 
@@ -113,3 +113,4 @@ alias php='cd ~/Documents/epsi/php'
 alias reseau='cd ~/Documents/epsi/reseau'
 alias sql='cd ~/Documents/epsi/sql'
 alias windows='cd ~/Documents/epsi/windows'
+alias uml='cd ~/Documents/epsi/uml'

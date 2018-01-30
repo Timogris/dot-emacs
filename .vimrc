@@ -1,3 +1,4 @@
+set runtimepath+=~/.vim/bundle/Vundle.vim
 set runtimepath+=~/.vim_runtime
 
 source ~/.vim_runtime/vimrcs/basic.vim
@@ -10,45 +11,37 @@ source ~/.vim_runtime/my_configs.vim
 catch
 endtry
 
-colorscheme angr 
+"enlever la barre des onglets
+set tabpagemax=1 showtabline=0
 
-let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ }
-
-"vimtex
 " VIM PLUG
 " Specify a directory for plugins
 " " - For Neovim: ~/.local/share/nvim/plugged
 " " - Avoid using standard Vim directory names like 'plugin'
 " call plug#begin('~/.vim/plugged')
 "
-" " Make sure you use single quotes
-call plug#begin()
-Plug 'lervag/vimtex'
-"A Vim Plugin for Lively Previewing LaTeX PDF Output
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+" Make sure you use single quotes
+call vundle#begin()
+
 "Folding code
-Plug 'tmhedberg/SimpylFold'
+Plugin 'tmhedberg/SimpylFold'
 
-Plug 'vim-scripts/indentpython.vim'
-"Autocomplete
-Plug 'Valloric/YouCompleteMe'"
+Plugin 'vim-scripts/indentpython.vim'
+
 "Syntax cheking/highlighting
-Plug 'vim-syntastic/syntastic'
-Plug 'nvie/vim-flake8'
-"search from vim
-Plug 'kien/ctrlp.vim'
-"pywal for vim
-Plug 'dylanaraps/wal.vim'
-call plug#end()
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
 
-let g:livepreview_previewer = 'evince'
+call vundle#end()
+filetype plugin indent on
+
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
+
 " Enable folding with the spacebar
 nnoremap <space> za
+
 "Strings for folded code
 let g:SimpylFold_docstring_preview=1
 
@@ -63,7 +56,6 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-
 "Formattage web dev
 au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2
@@ -73,12 +65,7 @@ au BufNewFile,BufRead *.js, *.html, *.css
 "UTF-8 support
 set encoding=utf-8
 
-"autocompletion
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
 let python_highlight_all=1
 syntax on
- 
- cnoreabbrev NERD NERDTree
- cnoreabbrev pdflatex LLPStartPreview
+
+set nu
